@@ -23,7 +23,7 @@ function TodoList() {
       id: 1,
       text: '買菜菜',
       completed: false,
-      edit: true,
+      edit: false,
     },
   ])
   // 篩選後
