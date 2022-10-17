@@ -6,7 +6,6 @@ import './style/_todolist.scss'
 import AddInput from './AddInput'
 import FilterList from './FilterList'
 import TodoContent from './TodoContent'
-import EditTodoContent from './EditTodoContent'
 import Footer from './Footer'
 
 const tabList = ['全部', '待完成', '已完成']
