@@ -19,12 +19,12 @@ function TodoList() {
 
   //代辦事項
   const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: '買菜菜',
-      completed: false,
-      edit: false,
-    },
+    // {
+    //   id: 1,
+    //   text: '買菜菜',
+    //   completed: false,
+    //   edit: false,
+    // },
   ])
   // 篩選後
   const [filterTodoList, setFilterTodoList] = useState(todos)

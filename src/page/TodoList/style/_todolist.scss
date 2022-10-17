@@ -2,10 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600, 700");
 
 * {
-    box-sizing: border-box;
-    text-decoration: none;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Baloo Tamma 2" ,sans-serif;
+    scroll-behavior: smooth;
 }
 // 變數
 $dark: #333;
@@ -42,7 +44,6 @@ h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    font-family: "Baloo Tamma 2";
     letter-spacing: 0.5rem;
     font-weight: bold;
 }
