@@ -13,7 +13,7 @@ function AddInput({ inputValue, setInputValue, todos, setTodos }) {
             // console.log(e.target.value)
             setInputValue(e.target.value)
           }}
-          onKeyDown={(e) => {
+          onKeyPress={(e) => {
             // console.log(e, e.key)
             if (e.key === 'Enter') {
               if (inputValue === '') {

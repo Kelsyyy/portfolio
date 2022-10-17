@@ -6,7 +6,6 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: "Baloo Tamma 2" ,sans-serif;
     scroll-behavior: smooth;
 }
 // 變數
@@ -22,12 +21,12 @@ $gary: #b5b5b5;
     box-shadow: 0 0 5px rgba(51, 51, 51, 0.628);
 }
 
-@mixin button {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background: $white;
-    border-radius: 0px 0px 10px 10px;
+@mixin todoContentBtn {
+    color: $white;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 6px;
+    margin-right: .5rem;
 }
 
 body {
@@ -43,7 +42,7 @@ li{
 h1 {
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     letter-spacing: 0.5rem;
     font-weight: bold;
 }
@@ -160,23 +159,20 @@ h1 {
 .btn{
     cursor: pointer;
 }
-.edit{
+.editBtn{
     background: #eac369;
-    color: $white;
-    border: 0;
-    border-radius: 3px;
-    padding: 5px;
-    margin-right: .5rem;
+    @include todoContentBtn();
 }
 .deleteBtn{
     background: #e70000;
-    color: $white;
-    border: 0;
-    border-radius: 3px;
-    padding: 6.5px;
+    @include todoContentBtn();
 }
 .footer{
-    @include button;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: $white;
+    border-radius: 0px 0px 10px 10px;
     font-size: 12px;
 }
 .clearBtn{

@@ -39,7 +39,7 @@ function TodoContent({
 
               <div>
                 <button
-                  className="btn edit"
+                  className="btn editBtn"
                   onClick={() => {
                     updateTodo(todos.id)
                   }}
@@ -50,7 +50,7 @@ function TodoContent({
                   className="btn deleteBtn"
                   onClick={() => deleteHandler(todos.id)}
                 >
-                  Delete
+                  刪除
                 </button>
               </div>
             </div>
@@ -73,7 +73,7 @@ function TodoContent({
             </div>
             <div>
               <button
-                className="btn edit"
+                className="btn editBtn"
                 onClick={() => editHandler(todos.id)}
               >
                 修改
@@ -82,7 +82,7 @@ function TodoContent({
                 className="btn deleteBtn"
                 onClick={() => deleteHandler(todos.id)}
               >
-                Delete
+                刪除
               </button>
             </div>
           </div>
