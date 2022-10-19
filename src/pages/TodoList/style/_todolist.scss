@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600, 700");
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+// 變數
+$dark: #333;
+$white: #fff;
+$gary: #b5b5b5;
+
+@mixin card {
+    max-width: 100%;
+    background: $white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.628);
+}
+
+@mixin todoContentBtn {
+    color: $white;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 6px;
+    margin-right: .5rem;
+}
+
+li{
+    list-style: none;
+}
+.bg {
+    width: 100%;
+    height: 100vh;
+    color: $dark;
+    background: linear-gradient(60deg, #eacd89 10%, #d5a18a, #cc939e, #d18cc2);
+    letter-spacing: 0.05em;
+}
+.container {
+    width: 500px;
+    margin: auto;
+    margin-top: -15px;
+    padding: 0 12px;
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        padding: 1.8rem 0 0;
+        letter-spacing: 0.5rem;
+        font-weight: bold;
+    }
+}
+.card {
+    @include card()
+}
+.cardList{
+    border-radius: 10px 10px 0 0 ;
+}
+.addTodoInput {
+    display: flex;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.todoInput{
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+.addTodoBtn{
+    background: $dark;
+    color: $white;
+    outline: 0;
+    border: 0;
+    width: 2.3rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: .8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &:active,&:hover{
+        outline: 3px solid #b3b3b3b8;
+        transition: .5;
+      }
+}
+.cardList{
+    padding: 0;
+}
+.tab{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    .active{
+        border-bottom: 2px solid $dark;
+        color: $dark;
+        font-weight: bold
+    }
+    li{
+        padding: 1rem;
+        width: 100%;
+        color: $gary;
+        border-bottom: 2px solid $gary;
+        cursor: pointer;
+        &:active{
+            border-bottom: 2px solid $dark;
+            color: $dark;
+            font-weight: bold
+        }
+        &:hover{
+            color: $dark;
+        }
+    }
+}
+.todoContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: $white;
+    // &:last-child{
+    //     border-radius: 0px 0px 10px 10px;
+    // }
+}
+.checkBox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.lineThtough{
+    text-decoration: line-through;
+}
+.todoContentText{
+    display: flex;
+    align-items: center;
+}
+.editInput{
+    border-radius: 3px;
+    padding: 3px;
+    border: 1px solid #b3b3b3b8;
+    outline: 1px solid #b3b3b3b8;
+}
+.remindInput{
+    border-radius: 3px;
+    padding: 3px;
+    border: 1px solid #e70000;
+    outline: 2px solid #e7000078;
+}
+.remindText{
+    font-size: 10px;
+    margin-left: .5rem;
+    color: #e70000;
+}
+.btn{
+    cursor: pointer;
+}
+.editBtn{
+    background: #eac369;
+    @include todoContentBtn();
+}
+.saveBtn{
+    background: #8f8f8f;
+    @include todoContentBtn();
+
+}
+.deleteBtn{
+    background: #e70000;
+    @include todoContentBtn();
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: $white;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 12px;
+}
+.clearBtn{
+    font-size: 12px;
+    background: none;
+    // color: $white;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    border: 0;
+}
