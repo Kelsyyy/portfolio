@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600, 700");
 
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
 // 變數
 $dark: #333;
 $white: #fff;
@@ -18,7 +11,7 @@ $gary: #b5b5b5;
     background: $white;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 5px rgba(51, 51, 51, 0.628);
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0);
 }
 
 @mixin todoContentBtn {
@@ -29,6 +22,18 @@ $gary: #b5b5b5;
     margin-right: .5rem;
 }
 .todoList{
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    ul{
+        margin: 0;
+        padding: 0;
+    }
     li{
         list-style: none;
     }
@@ -61,7 +66,7 @@ $gary: #b5b5b5;
     .addTodoInput {
         display: flex;
         position: relative;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     .todoInput{
         width: 100%;
@@ -167,7 +172,7 @@ $gary: #b5b5b5;
     .saveBtn{
         background: #8f8f8f;
         @include todoContentBtn();
-
+    
     }
     .deleteBtn{
         background: #e70000;
@@ -189,5 +194,4 @@ $gary: #b5b5b5;
         border-radius: 3px;
         outline: 0;
         border: 0;
-    }
-}
+    }}
