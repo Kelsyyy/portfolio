@@ -100,32 +100,34 @@ function TodoList() {
 
   return (
     <>
-      <div className="bg">
-        <div className="container">
-          <h1>TODO LIST</h1>
-          <AddInput
-            inputValue={inputValue}
-            setInputValue={setInputValue}
-            todos={todos}
-            setTodos={setTodos}
-          />
-          <FilterList tabList={tabList} list={list} setList={setList} />
-          <TodoContent
-            setTodos={setTodos}
-            filterTodoList={filterTodoList}
-            editValue={editValue}
-            setEditValue={setEditValue}
-            deleteHandler={deleteHandler}
-            completeHandler={completeHandler}
-            tabList={tabList}
-            list={list}
-            setList={setList}
-            editHandler={editHandler}
-            updateTodo={updateTodo}
-            remind={remind}
-            setRemind={setRemind}
-          />
-          <Footer todos={todos} clearStorage={clearStorage} />
+      <div className="todoList">
+        <div className="bg">
+          <div className="container">
+            <h1>TODO LIST</h1>
+            <AddInput
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              todos={todos}
+              setTodos={setTodos}
+            />
+            <FilterList tabList={tabList} list={list} setList={setList} />
+            <TodoContent
+              setTodos={setTodos}
+              filterTodoList={filterTodoList}
+              editValue={editValue}
+              setEditValue={setEditValue}
+              deleteHandler={deleteHandler}
+              completeHandler={completeHandler}
+              tabList={tabList}
+              list={list}
+              setList={setList}
+              editHandler={editHandler}
+              updateTodo={updateTodo}
+              remind={remind}
+              setRemind={setRemind}
+            />
+            <Footer todos={todos} clearStorage={clearStorage} />
+          </div>
         </div>
       </div>
     </>
