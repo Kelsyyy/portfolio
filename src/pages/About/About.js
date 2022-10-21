@@ -7,9 +7,6 @@ import 'firebase/compat/firestore'
 import './_about.scss'
 import { FaMobileAlt } from 'react-icons/fa'
 import { SiGmail, SiGithub } from 'react-icons/si'
-// import { LoadingOutlined } from '@ant-design/icons'
-// import { Spin } from 'antd'
-// import { Timeline } from 'antd'
 
 const connectionIcon = css`
   margin: 0 5px 0 0px;
@@ -17,21 +14,21 @@ const connectionIcon = css`
 `
 
 function About() {
-  const [topics, setTopics] = useState([])
+  const [data, setData] = useState([])
   useEffect(() => {
     firebase
       .firestore()
-      .collection('information')
+      .collection('detail')
       .get()
       .then((collectionSnapshot) => {
         // 取的docs為陣列
         const data = collectionSnapshot.docs.map((doc) => {
           return doc.data()
         })
-        setTopics(data)
-        // console.log(data)
+        setData(data)
       })
   }, [])
+  // console.log(data)
   return (
     <>
       <div className="aboutMe">
@@ -39,22 +36,26 @@ function About() {
           <div className="resume">
             <div className="top">
               <h1>KELSY LIN</h1>
-              <div className="connectionWrap">
-                <div className="connection">
-                  <FaMobileAlt css={connectionIcon} />
-                  0925336192
-                </div>
-                <div className="connection">
-                  <SiGmail css={connectionIcon} />
-                  clyn8877@gmail.com
-                </div>
-                <div className="connection">
-                  <a href="https://github.com/Kelsyyy">
-                    <SiGithub css={connectionIcon} />
-                    GitHub
-                  </a>
-                </div>
-              </div>
+              {data.map((v, i) => {
+                return (
+                  <div className="connectionWrap" key={i}>
+                    <div className="connection">
+                      <FaMobileAlt css={connectionIcon} />
+                      {v.phone}
+                    </div>
+                    <div className="connection">
+                      <SiGmail css={connectionIcon} />
+                      {v.email}
+                    </div>
+                    <div className="connection">
+                      <a href={v.github}>
+                        <SiGithub css={connectionIcon} />
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
             <main className="main ">
               <h2>About me</h2>
@@ -66,7 +67,6 @@ function About() {
                 </ul>
               </div>
               <h2>Education</h2>
-
               <div className="experienceContent">
                 <div className="ContentWrap">
                   <div className="d-flex justify-content-between">
@@ -84,7 +84,6 @@ function About() {
                 </div>
               </div>
               <h2>Job</h2>
-
               <div className="experienceContent">
                 <div className="ContentWrap">
                   <div className="d-flex justify-content-between">
