@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { useState, useEffect, useMemo } from 'react'
-import { ReactComponent as CloudyIcon } from '../../images/cloudy.svg'
 import { ReactComponent as DayThunderstorm } from '../../images/day-thunderstorm.svg'
 import { ReactComponent as DayClear } from '../../images/day-clear.svg'
 import { ReactComponent as DayCloudyFog } from '../../images/day-cloudy-fog.svg'
