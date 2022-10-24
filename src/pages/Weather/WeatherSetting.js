@@ -125,6 +125,9 @@ function WeatherSetting({ setCurrentPage, cityName, setCurrentCity }) {
           ref={inputLocationRef}
           defaultValue={locationName}
           onChange={handleChange}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') handleSave()
+          }}
         />
         <datalist id="location-list">
           {locations.map((location) => (
