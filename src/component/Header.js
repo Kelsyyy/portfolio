@@ -6,12 +6,6 @@ import { Link } from 'react-router-dom'
 import 'firebase/compat/auth'
 import firebase from '../utils/firebase'
 
-
-// const pages = [
-//   { title: '商品一覽', route: '/social' },
-//   { title: 'TODO LIST', route: '/todolist' },
-// ]
-
 function Header() {
   const [user, setUser] = useState(null)
   useEffect(() => {
@@ -36,12 +30,15 @@ function Header() {
         <Menu.Item as={Link} to="/todolist">
           Todo List
         </Menu.Item>
+        <Menu.Item as={Link} to="/weather">
+          Weather
+        </Menu.Item>
         <Menu.Menu />
         <Menu.Menu position="right" />
         {user ? (
           <>
             <Menu.Item as={Link} to="/new-post">
-              發表文章
+              持續增加作品中
             </Menu.Item>
             <Menu.Item as={Link} to="/member">
               會員
