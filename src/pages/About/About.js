@@ -9,7 +9,7 @@ import { FaMobileAlt } from 'react-icons/fa'
 import { SiGmail, SiGithub } from 'react-icons/si'
 
 const connectionIcon = css`
-  margin: 0 5px 0 0px;
+  margin: 0 5px 3px 0px;
   font-size: 16px;
 `
 

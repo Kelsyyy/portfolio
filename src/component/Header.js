@@ -17,14 +17,14 @@ function Header() {
   return (
     <>
       <Menu>
-        <Menu.Item as={Link} to="/">
+        <Menu.Item as={Link} to="/portfolio">
           Portfolio
         </Menu.Item>
         <Menu.Item>
           <Search />
         </Menu.Item>
         <Menu.Menu />
-        <Menu.Item as={Link} to="/">
+        <Menu.Item as={Link} to="/portfolio">
           About Me
         </Menu.Item>
         <Menu.Item as={Link} to="/todolist">
