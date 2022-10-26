@@ -95,7 +95,7 @@ function About() {
                 <div className="ContentWrap">
                   <div className="d-flex justify-content-between">
                     <h4 className="contentTitle">出國</h4>
-                    <p className="timeText">2019/05 ~ 2022/04</p>
+                    <p className="timeText">2019/05 ~ 2020/04</p>
                   </div>
                 </div>
                 <div className="ContentWrap">
