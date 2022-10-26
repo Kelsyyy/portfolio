@@ -70,7 +70,7 @@ function About() {
               <div className="experienceContent">
                 <div className="ContentWrap">
                   <div className="d-flex justify-content-between">
-                    <h4 className="contentTitle">財團法人資訊工業策進會</h4>
+                    <h4 className="contentTitle">資展國際股份有限公司</h4>
                     <p className="timeText">2022/05 ~ 2022/10</p>
                   </div>
                   <p>前端工程養成班</p>
